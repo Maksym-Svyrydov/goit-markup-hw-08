@@ -1186,7 +1186,7 @@ img {
     height: 92px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .customers__item {
     width: 226px;
     height: 92px;
@@ -1226,8 +1226,10 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .customers__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

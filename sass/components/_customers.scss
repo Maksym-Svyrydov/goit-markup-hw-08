@@ -22,7 +22,6 @@
 .customers__item {
   display: flex;
   width: 170px;
-
   justify-content: center;
   align-items: center;
   border: 1px solid #afb1b8;
@@ -34,8 +33,7 @@
     width: calc((100% - 30px) / 2);
     height: 92px;
   }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     width: 226px;
     height: 92px;
   }
@@ -62,7 +60,9 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  @media screen and (max-width: 767px) {
+  padding-inline-start: 0;
+
+  @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
   }
 }
