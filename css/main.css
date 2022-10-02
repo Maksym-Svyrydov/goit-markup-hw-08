@@ -1571,8 +1571,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .list-btn {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 34px;
   }
 }
 
