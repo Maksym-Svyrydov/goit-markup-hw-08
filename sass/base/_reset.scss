@@ -17,12 +17,14 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
 }
 .list {
   list-style: none;
   padding-left: 0px;
   margin: 0px;
-}
-.link {
-  text-decoration: none;
 }

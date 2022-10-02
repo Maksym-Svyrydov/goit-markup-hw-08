@@ -8,6 +8,10 @@
   letter-spacing: 0.02em;
 
   &--black {
+    @media screen and (max-width: 767px) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
     color: var(--main-txt-cl);
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -27,4 +31,8 @@
   line-height: calc(30.52 / 26);
   letter-spacing: 0.02em;
   margin-right: 93px;
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

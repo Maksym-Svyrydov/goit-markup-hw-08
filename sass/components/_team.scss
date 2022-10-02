@@ -13,15 +13,60 @@
     color: var(--main-txt-cl);
   }
   &__list {
-    gap: 30px;
-    display: flex;
     list-style: none;
+    display: flex;
+    @media screen and (min-width: 1200px) {
+      gap: 30px;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 738px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__card {
     background-color: var(--background-txt-xl);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 354px;
+
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 1199px) {
+      width: 270px;
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__subtitle {

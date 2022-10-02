@@ -5,11 +5,43 @@
 }
 .footer__conainer {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 1199.98px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+
+    align-items: baseline;
+  }
 }
 .footer__adress-block {
-  margin-right: 70px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
+.social-footer {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
 .social-footer__title {
   color: var(--background-txt-xl);
   font-family: inherit;
@@ -91,7 +123,15 @@
   }
 }
 .subscribe {
-  margin-left: auto;
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1199.98px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
   &__title {
     display: inline-block;
     font-family: inherit;
@@ -105,10 +145,19 @@
   }
   &__form {
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
   }
 
   &__label {
+    width: 100%;
     display: block;
+    @media screen and (max-width: 1199.98px) {
+      margin-bottom: 20px;
+    }
   }
   &__input {
     width: 358px;
@@ -123,12 +172,26 @@
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
       drop-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 767.98px) {
+      max-width: 450px;
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
   }
   &__input:focus,
   &__input:hover {
     border: 1px solid var(--background-txt-xl);
   }
   &__btn {
+    margin-left: auto;
+    margin-right: auto;
     width: 200px;
     height: 50px;
     font-weight: 700;

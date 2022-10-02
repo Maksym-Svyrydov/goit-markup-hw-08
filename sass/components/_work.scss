@@ -35,4 +35,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
   }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }

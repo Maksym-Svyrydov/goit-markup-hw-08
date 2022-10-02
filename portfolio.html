@@ -2,6 +2,14 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile menu workshop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
@@ -11,22 +19,33 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-   <!-- modern-normalize -->
-   <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-   integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-   crossorigin="anonymous"
-   referrerpolicy="no-referrer"
- />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <!-- modern-normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <!--<link rel="stylesheet" href="./css/styles.css" />-->
   </head>
   <body>
     <!--Верхня лінія-->
     <header class="header">
       <div class="container header__container">
-        <a class="header__logo--black" href="./index.html"><span class="header__logo">Web</span>Studio</a>
+        <a class="header__logo--black" href="./index.html"
+          ><span class="header__logo">Web</span>Studio</a
+        >
+        <button
+          class="menu-toggle js-open-menu is-open"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="icon-menu" width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav>
           <ul class="header__nav">
             <li class="header__item">
@@ -66,11 +85,11 @@
         <h1 class="visually-hidden">Наші роботи</h1>
         <div class="container">
           <ul class="list-btn">
-            <li><button class="list-btn__btn" type="button">Усі</button> </li>
-            <li> <button class="list-btn__btn" type="button">Веб-сайти</button></li>
-            <li> <button class="list-btn__btn" type="button">Додатки</button></li>
-            <li><button class="list-btn__btn" type="button">Дизайн</button> </li>
-            <li><button class="list-btn__btn" type="button">Маркетинг</button> </li>
+            <li><button class="list-btn__btn" type="button">Усі</button></li>
+            <li><button class="list-btn__btn" type="button">Веб-сайти</button></li>
+            <li><button class="list-btn__btn" type="button">Додатки</button></li>
+            <li><button class="list-btn__btn" type="button">Дизайн</button></li>
+            <li><button class="list-btn__btn" type="button">Маркетинг</button></li>
           </ul>
           <!--Портофоліо-->
           <ul class="portfolio list">
@@ -78,11 +97,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/notebook-desc.jpg    370w,
+                      ./images/portfolio/desctop/notebook-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/notebook-tab.jpg      354w,
+                      ./images/portfolio/tablet/notebook-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/notebook-mob.jpg      450w,
+                      ./images/portfolio/mobile/notebook-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/notebook-mob.jpg"
+                    alt="laptop"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -102,11 +129,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/poster-desc.jpg    370w,
+                      ./images/portfolio/desctop/poster-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/poster-tab.jpg      354w,
+                      ./images/portfolio/tablet/poster-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/poster-mob.jpg      450w,
+                      ./images/portfolio/mobile/poster-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-1.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/poster-mob.jpg"
+                    alt="poster"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -126,11 +161,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/seafood-desc.jpg    370w,
+                      ./images/portfolio/desctop/seafood-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/seafood-tab.jpg      354w,
+                      ./images/portfolio/tablet/seafood-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/seafood-mob.jpg      450w,
+                      ./images/portfolio/mobile/seafood-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-2.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/seafood-mob.jpg"
+                    alt="Seafood"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -150,11 +193,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/prime-desc.jpg    370w,
+                      ./images/portfolio/desctop/prime-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/prime-tab.jpg      354w,
+                      ./images/portfolio/tablet/prime-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/prime-mob.jpg      450w,
+                      ./images/portfolio/mobile/prime-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-3.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/prime-mob"
+                    alt="Headphones"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -165,9 +216,9 @@
                   </div>
                 </div>
                 <div class="portfolio__card">
-                  <h2 class="portfolio__card-subtitle" class="portfolio__card-subtitle"
-                    >Проєкт <span lang="en">Prime</span></h2
-                  >
+                  <h2 class="portfolio__card-subtitle" class="portfolio__card-subtitle">
+                    Проєкт <span lang="en">Prime</span>
+                  </h2>
                   <p class="portfolio__card-txt">Маркетинг</p>
                 </div>
               </a>
@@ -176,11 +227,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/boxes-desc.jpg    370w,
+                      ./images/portfolio/desctop/boxes-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/boxes-tab.jpg      354w,
+                      ./images/portfolio/tablet/boxes-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/boxes-mob.jpg      450w,
+                      ./images/portfolio/mobile/boxes-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-4.jpg"
+                    src="./images/portfolio/mobile/boxes-mob.jpg"
                     alt=""
-                    width="370"
-                    height="294"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -191,9 +250,9 @@
                   </div>
                 </div>
                 <div class="portfolio__card">
-                  <h2 class="portfolio__card-subtitle" class="portfolio__card-subtitle"
-                    >Проєкт <span lang="en">Boxes</span></h2
-                  >
+                  <h2 class="portfolio__card-subtitle" class="portfolio__card-subtitle">
+                    Проєкт <span lang="en">Boxes</span>
+                  </h2>
                   <p class="portfolio__card-txt">Додаток</p>
                 </div>
               </a>
@@ -202,18 +261,27 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/inspiration-desc.jpg    370w,
+                      ./images/portfolio/desctop/inspiration-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/inspiration-tab.jpg      354w,
+                      ./images/portfolio/tablet/inspiration-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/inspiration-mob.jpg      450w,
+                      ./images/portfolio/mobile/inspiration-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-5.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/inspiration-mob"
+                    alt="monitor"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
-                      приватну особу. </p
-                    >\
+                      приватну особу.
+                    </p>
+                    /
                   </div>
                 </div>
                 <div class="portfolio__card">
@@ -226,11 +294,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/limited-desc.jpg    370w,
+                      ./images/portfolio/desctop/limited-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/limited-tab.jpg      354w,
+                      ./images/portfolio/tablet/limited-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/limited-mob.jpg      450w,
+                      ./images/portfolio/mobile/limited-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-6.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/limited-mob.jpg"
+                    alt="Book"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -241,7 +317,9 @@
                   </div>
                 </div>
                 <div class="portfolio__card">
-                  <h2 class="portfolio__card-subtitle">Видання <span lang="en">Limited Edition</span></h2>
+                  <h2 class="portfolio__card-subtitle">
+                    Видання <span lang="en">Limited Edition</span>
+                  </h2>
                   <p class="portfolio__card-txt">Дизайн</p>
                 </div>
               </a>
@@ -250,11 +328,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/lab-desc.jpg    370w,
+                      ./images/portfolio/desctop/lab-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/lab-tab.jpg      354w,
+                      ./images/portfolio/tablet/lab-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/lab-mob.jpg      450w,
+                      ./images/portfolio/mobile/lab-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-7.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/lab-mob.jpg"
+                    alt="Label"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -274,11 +360,19 @@
               <a class="portfolio__link link" href="">
                 <div class="porfolio__tumb">
                   <img
+                    srcset="
+                      ./images/portfolio/desctop/notebook-desc.jpg    370w,
+                      ./images/portfolio/desctop/notebook-desc@2x.jpg 740w,
+                      ./images/portfolio/tablet/notebook-tab.jpg      354w,
+                      ./images/portfolio/tablet/notebook-tab@2x.jpg   708w,
+                      ./images/portfolio/mobile/notebook-mob.jpg      450w,
+                      ./images/portfolio/mobile/notebook-mob@2x.jpg   900w
+                    "
                     class="portfolio__img"
-                    src="./images/portfolio/img-8.jpg"
-                    alt=""
-                    width="370"
-                    height="294"
+                    src="./images/portfolio/mobile/notebook-mob.jpg"
+                    alt="notebook"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    loading="lazy"
                   />
                   <div class="portfolio__overlay">
                     <p class="portfolio__overlay-desc">
@@ -303,7 +397,9 @@
     <footer class="footer">
       <div class="footer__conainer container">
         <div class="footer__adress-block">
-          <a class="footer__logo--white" href="./index.html"><span class="header__logo">Web</span>Studio</a>
+          <a class="footer__logo--white" href="./index.html"
+            ><span class="header__logo">Web</span>Studio</a
+          >
           <address class="footer__adress">
             <ul class="footer__adress-list">
               <li class="footer__adress-item">
@@ -317,7 +413,9 @@
                 >
               </li>
               <li class="footer__adress-item">
-                <a class="footer__adress-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="footer__adress-mail" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li>
                 <a class="footer__adress-tel" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -382,29 +480,67 @@
             </li>
           </ul>
         </div>
-        
-      <div class="subscribe">
-        <p class="subscribe__title">Підпишіться на розсилку</p>
-        <form class="subscribe__form" action="">
-          <label class="subscribe__label">
-            <input class="subscribe__input" type="email" name="email" placeholder="E-mail">
-          </label>
-          <button class="subscribe__btn" type="submit">
-            <span class="subscribe__footer">
-              Підписатися
-              <svg class="subscribe__icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-icon-send"></use>
-              </svg>
-            </span>
-          </button>          
-        </form>
-      </div>
+
+        <div class="subscribe">
+          <p class="subscribe__title">Підпишіться на розсилку</p>
+          <form class="subscribe__form" action="">
+            <label class="subscribe__label">
+              <input class="subscribe__input" type="email" name="email" placeholder="E-mail" />
+            </label>
+            <button class="subscribe__btn" type="submit">
+              <span class="subscribe__footer">
+                Підписатися
+                <svg class="subscribe__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-  </body>
-</html>
-<!-- modal.js -->
+    <!--mobile menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="icon-close__mobile" width="40" height="40">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="header__nav--mobile list">
+        <li class="header__item--mobile">
+          <a class="header__nav-link--mobile" href="./index.html">Студія</a>
+        </li>
+        <li class="header__item--mobile">
+          <a class="header__nav-link--mobile current" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="header__item--mobile">
+          <a class="header__nav-link--mobile" href="./index.html">Контакти</a>
+        </li>
+      </ul>
+      <ul class="header__contacts--mobile">
+        <li class="contacts--mobile">
+          <a class="contacts__link--mobile link" href="mailto:info@devstudio.com"
+            >info@devstudio.com
+          </a>
+        </li>
+        <li class="contacts--mobile">
+          <a class="contacts__link--mobile link" href="tel:+380961111111">+38 096 111 11 11 </a>
+        </li>
+      </ul>
+    </div>
 
-<script src="./js/modal.js"></script>
-</body>
+    <!-- menu -->
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+
+    <!-- modal.js -->
+
+    <script src="./js/modal.js"></script>
+  </body>
 </html>
