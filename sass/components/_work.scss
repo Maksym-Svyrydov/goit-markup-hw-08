@@ -7,6 +7,9 @@
     line-height: calc(42.19 / 36);
     text-align: center;
     color: var(--main-txt-cl);
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+    }
   }
   &__list {
     display: flex;
